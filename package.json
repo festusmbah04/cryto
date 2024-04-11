@@ -1,17 +1,15 @@
 {
   "name": "encryted-api-f3w.pages.dev",
   "version": "1.0.0",
-  "description": "",
-  "main": "jquery.js",
+  "description": "Description of your Node.js application",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "build": "echo 'Build script placeholder (if needed)'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.19.2",
-    "nodemailer": "^6.9.13"
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "nodemailer": "^6.7.0"
   }
 }
