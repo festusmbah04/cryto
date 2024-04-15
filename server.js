@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
   service: 'Gmail', // Specify your email service provider
   auth: {
     user: 'festusmbahconnect@gmail.com', 
-    pass: 'ifgaafyevlngv' 
+    pass: 'ulchsarqvbpftgwz' 
   }
 });
 
