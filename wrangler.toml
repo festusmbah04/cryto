@@ -1,10 +1,12 @@
-name = "crpto"
-type = "webpack"  # or "javascript", depending on your setup
+name = "checkcrpto"
+type = "webpack"
+account_id = "Festusmbahcloud@gmail.com"
+workers_dev = false
 
-[build]
-  publish = "public"
-  command = "npm run build"
+[site]
+bucket = "./public"
+entry-point = "workers-site"
 
 [[routes]]
   pattern = "/submit_email"
-  command = "npm start"
+  script = "workers-site"
