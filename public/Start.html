@@ -50,11 +50,8 @@
                     
                         // Display error message after 5 seconds if form submission fails
                         setTimeout(function() {
-                            if (!form.submitted) {
-                                document.querySelector('.u-form-send-error').style.display = 'block';
-                                document.querySelector('.u-form-send-success').style.display = 'none';
-                            }
-                        }, 1000); 
+                        window.location.href = window.location.href;
+                           }, 1000); 
                     }
                 </script>
             </div>
