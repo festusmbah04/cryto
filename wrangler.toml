@@ -1,0 +1,10 @@
+name = "crpto"
+type = "webpack"  # or "javascript", depending on your setup
+
+[build]
+  publish = "public"
+  command = "npm run build"
+
+[[routes]]
+  pattern = "/submit_email"
+  command = "npm start"
