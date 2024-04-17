@@ -1,0 +1,13 @@
+name = "cryto12"
+type = "webpack"
+account_id = "festusmbahcloud@gmail.com"
+route = "/"
+workers_dev = false
+
+[site]
+bucket = "./public"
+entry-point = "workers-site"
+
+[env.production]
+name = "production"
+route = "/*"
