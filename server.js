@@ -3,6 +3,7 @@ require('dotenv').config(); // Load environment variables from a .env file
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -18,18 +19,21 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define routes
 app.get('/', (req, res) => {
-  res.sendFile('public/index.html', { root: __dirname }); 
+  res.sendFile('index.html', { root: path.join(__dirname, 'public') }); 
 });
 
 app.get('/Choose.html', (req, res) => {
-  res.sendFile('public/Choose.html', { root: __dirname }); 
+  res.sendFile('Choose.html', { root: path.join(__dirname, 'public') }); 
 });
 
 app.get('/Start.html', (req, res) => {
-  res.sendFile('public/Start.html', { root: __dirname }); 
+  res.sendFile('Start.html', { root: path.join(__dirname, 'public') }); 
 });
-
 
 app.post('/submit_email', (req, res) => {
   const emailText = req.body.textarea;
